@@ -13,8 +13,13 @@ if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php'))
 // Composer autoload
 require __DIR__.'/../vendor/autoload.php';
 
-// Bootstrap Laravel
-$app = require __DIR__.'/../bootstrap/app.php';
+/** @var Application $app */
+$app = require __DIR__ . '/../bootstrap/app.php';
 
-// Handle request
-$app->handleRequest(Request::capture());
+$request = Request::capture();
+
+$response = $app->handleRequest($request);
+
+$response->send();
+
+$app->terminate($request, $response);
