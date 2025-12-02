@@ -1,0 +1,6 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SalesController;
+
+Route::get('/', [SalesController::class, 'index']);
