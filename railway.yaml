@@ -1,0 +1,17 @@
+services:
+  - name: laravel-app
+    type: web
+    plan: free
+    build:
+      dockerfilePath: ./Dockerfile
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: APP_KEY
+        value: base64:isi_kunci_kamu
+      - key: DB_CONNECTION
+        value: sqlite
+      - key: DB_DATABASE
+        value: /var/www/html/database/database.sqlite
