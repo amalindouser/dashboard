@@ -10,7 +10,7 @@ services:
       - key: APP_DEBUG
         value: false
       - key: APP_KEY
-        value: base64:isi_kunci_kamu
+        value: base64:cEg4M8xZKPRaJOxpVJK0KKDHwggLtnO2g1DcPdGXSiY=
       - key: DB_CONNECTION
         value: sqlite
       - key: DB_DATABASE
